@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming on</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+    padding-top:70px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.img-log {
+    justify-content: center;
+   
+    margin-left: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+.hero{
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1598550476439-6847785fcea6") center/cover no-repeat;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <img class="img-log" src="img/11b9bec9-a6f0-40fe-83a5-f4e881fd5278.png" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+           
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link active">Servicios</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link active">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link active">Contactenos</a>
+                </li>
+            </ul>    
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center text-center text-white">
+        <div class="container">
+
+            <h1 class="display-3 fw-bold">Potencia tu experiencia Gaming en PC</h1>
+            <p class="lead mt-3">Noticias, configuraciones, hardware y guías para gamers reales.</p>
+
+        </div>
+        
+    </section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">ÚNETE AL CLAN 🎮</h2>
+
+                <form class="p-4 shadow bg-white rounded">
+
+                    <!-- ALERT -->
+                    <div class="alert alert-success d-none" id="alertaClan">
+                        🎮 ¡Te uniste al clan correctamente!
+                    </div>
+
+                    <!-- Nick -->
+                    <div class="mb-3">
+                        <label for="nick" class="form-label">Nick</label>
+                        <input type="text" class="form-control" id="nick" placeholder="Ingresa tu nombre gamer">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" placeholder="ejemplo@email.com">
+                    </div>
+
+                    <!-- Juego -->
+                    <div class="mb-3">
+                        <label for="game" class="form-label">Juego Favorito</label>
+                        <input type="text" class="form-control" id="game" placeholder="Valorant, Fortnite, Warzone...">
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="mb-3">
+                        <label for="mess" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mess" rows="3"></textarea>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="text-center">
+                        <button type="button"
+                                class="btn btn-dark px-4"
+                                onclick="mostrarAlerta()"
+                                data-bs-toggle="modal"
+                                data-bs-target="#clanModal">
+                            Enviar Datos
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5">Nuestros Servicios</h2>
+            <div class="row">
+                <!--tarjeta 1-->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Optimización PC</h5>
+                            <p class="card-text">Aumenta FPS y mejora el rendimiento de tus juegos favoritos.</p>
+                            <a href="#" class="btn btn-dark">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!--tarjeta 2-->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Guías Gaming</h5>
+                            <p class="card-text">
+                            Configuraciones profesionales y consejos para gamers.
+                            </p>
+                            <a href="#" class="btn btn-dark">Ver más</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!--tarjeta 3-->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Hardware Gamer</h5>
+                            <p class="card-text">
+                            Recomendaciones de componentes para tu setup ideal.
+                            </p>
+                            <a href="#" class="btn btn-dark">Ver más</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center p-4">
+        <div class="container">
+            <h6>Mas Sobre nosotros</h6>
+            <p class="mb-1">Somos una comunidad apasionada por el gaming en PC, dedicada a ofrecer noticias, guías, recomendaciones de hardware y consejos para mejorar la experiencia de juego. Nuestro objetivo es ayudar a gamers de todos los niveles a optimizar su rendimiento, descubrir nuevos títulos y construir el setup perfecto. Creemos que el gaming es más que jugar: es una forma de conectar, competir y disfrutar la tecnología al máximo.</p>
+        </div>
+
+        <div>
+            <h6>Contactenos</h6>
+            <p class="mb-1">Celular: +591 69309587 <br> Facebook: Gaming Bolivia <br> Ubicación: 2Do anillo, alemana</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+<div class="modal fade" id="clanModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Bienvenido al Clan 🎮</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p>Tu registro fue exitoso.</p>
+        <p>Prepárate para mejorar tu experiencia gaming 🚀</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+            Continuar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function mostrarAlerta() {
+    document.getElementById("alertaClan").classList.remove("d-none");
+}
+</script>
+<script>
+function mostrarAlerta() {
+    document.getElementById("alertaClan").classList.remove("d-none");
+}
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
